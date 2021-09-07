@@ -1,13 +1,104 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-	<head> 
-		<title>LASTNAME Chapter8-9HandsOnExercise</title> 
-		<meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Thiessen Chapter8-9HandsOnExercise</title>
+		<meta charset="utf-8">
 		<style>
-		
-		</style>
-	</head> 
-<body> 
+		table {margin: auto;
+				border: 5px solid #000;
+				border-spacing: 0;
+				background-color: #83F7A8;
+			}
+	td, th {padding: 0.5em;
+					border: .5px solid #000;
+			}
+	#wrapper {display: flex;
+						flex-direction: column;}
 
-</body> 
-</html> 
+	input[type="radio"], input[type="checkbox"]{display: inline;}
+}
+	@media only screen and (max-width: 768px) {
+		display {display: flex;
+					flex-direction: column;}
+	table {display: flex;
+				flex-direction: column;}
+ }
+		</style>
+	</head>
+<body>
+		<table>
+			<caption><h1>Favorite Movie Details</h1></caption>
+			<thead>
+				<tr>
+					<th id="title">Title of Movie</th>
+					<th id="d">Director or Producer</th>
+					<th id="la">Leading Actor</th>
+					<th id="ls">Leading Actress</th>
+					<th id="r">Rating</th>
+					<th id="b">Brief Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td headers="title">Rocketman</td>
+					<td headers="d">Dexter Fletcher</td>
+					<td headers="la">Taron Egerton</td>
+					<td headers="ls">Bryce Dallas Howard</td>
+					<td headers="r">R</td>
+					<td headers="b">Young Reginald Dwight changes his name to Elton John
+						and collaborates with singer-songwriter Bernie Taupin to become one
+						of the most iconic figures in pop history. Set to his most beloved
+						songs, it's the epic musical story of Elton John, his breakthrough
+						years in the 1970s and his fantastical transformation from shy piano
+						prodigy to international superstar.
+					</td>
+				</tr>
+				<h1>Music Survey</h1>
+			<form method="post" action="http://webdevbasics.net/scripts/demo.php">
+				<div id="wrapper">
+					<fieldset id="info"><legend>Personal Information</legend>
+						<label for="myName">Name:</label>
+						<input type="text" name="myName" id="myName"
+						placeholder="your first and last name">
+						<label for="myEmail">Email:</label>
+						<input type="text" name="myEmail" id="myEmail"
+						placeholder="you@yourdomain.com">
+					</fieldset>
+					<fieldset id="type"><legend>Favorite Type of Music</legend>
+						Select Type:<br>
+						<input type="radio" name="type" id="r" value="rock">
+						Rock<br>
+						<input type="radio" name="type" id="p" value="pop">
+						Pop<br>
+						<input type="radio" name="type" id="at" value="alternative">
+						Alternative<br>
+						<br>
+						<legend></legend>
+						How often do you listen to music?<br>
+						<input type="checkbox" name="myOrg" id="oam" value="onceamonth">
+						Once a Month<br>
+						<input type="checkbox" name="myOrg" id="oaw" value="onceaweek">
+						Once a Week<br>
+						<input type="checkbox" name="myOrg" id="taw" value="twiceaweek">
+						Twice a Week<br>
+						<input type="checkbox" name="myOrg" id="ed" value="everyday">
+						Every Day<br>
+						<br>
+						<legend></legend>
+						Where do you listen to music?: <br>
+						<select size="1" name="where" id="where">
+							<option value="Inthecar">In The Car</option>
+							<option value="Athome">At Home</option>
+							<option value="Atschool">At School</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<label for="myComments">Comments:</label>
+						<textarea name="myComments" id="myComments" rows="3" cols="60">
+						</textarea>
+						<input id="mySubmit" type="submit" value="Submit">
+						<input id="reset" type="reset" value="Reset">
+					</fieldset>
+			</div>
+</body>
+</html>
